@@ -9,6 +9,21 @@
 #include <time.h>
 #include <unistd.h>
 
+char *strdup(const char *s) {
+  size_t i;
+  char *dst;
+
+  dst = calloc(strlen(s) + 1, sizeof(char));
+  if (!dst)
+    return (0);
+  i = 0;
+  while (s[i]) {
+    dst[i] = s[i];
+    i++;
+  }
+  return ((char *)dst);
+}
+
 void free_file(File *file) {
   if (!file)
     return;

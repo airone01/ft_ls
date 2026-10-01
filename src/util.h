@@ -6,6 +6,15 @@
 #include <sys/types.h>
 
 /**
+ * @brief Creates a duplicate of a string.
+ *
+ * @param s String to duplicate.
+ * @return char* Newly allocated copy of the string, or NULL if allocation
+ *         fails.
+ */
+char *strdup(const char *s);
+
+/**
  * @brief Frees dynamically allocated memory in a single File struct
  */
 void free_file(File *file);
